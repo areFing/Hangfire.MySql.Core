@@ -9,7 +9,7 @@ using Hangfire.MySql.Core.JobQueue;
 using Hangfire.MySql.Core.Monitoring;
 using Hangfire.Server;
 using Hangfire.Storage;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace Hangfire.MySql.Core
 {

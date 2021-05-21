@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Dapper;
 using Hangfire.Logging;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace Hangfire.MySql.Core
 {
