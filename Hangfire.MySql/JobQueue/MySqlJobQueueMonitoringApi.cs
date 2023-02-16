@@ -43,12 +43,12 @@ namespace Hangfire.MySql.Core.JobQueue
             string sqlQuery = @"
 SET @rank=0;
 select r.JobId from (
-  select jq.JobId, @rank := @rank+1 AS rank 
+  select jq.JobId, @rank := @rank+1 AS rank1 
   from JobQueue jq
   where jq.Queue = @queue
   order by jq.Id
 ) as r
-where r.rank between @start and @end;";
+where r.rank1 between @start and @end;";
 
             return _storage.UseConnection(connection =>
                 connection.Query<int>(
